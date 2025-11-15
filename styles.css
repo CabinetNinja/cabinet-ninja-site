@@ -13,6 +13,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #f3f3f3;
   color: var(--text-light);
@@ -36,7 +40,7 @@ header {
   align-items: center;
   gap: 10px;
   font-weight: 800;
-  color: white;
+  color: #ffffff;
   letter-spacing: 0.08em;
 }
 
@@ -54,7 +58,7 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: #fff;
+  color: #ffffff;
 }
 
 /* HERO */
@@ -74,6 +78,18 @@ nav a {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
+}
+
+.hero-mascot {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.hero-mascot img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 .hero-copy h1 {
@@ -130,6 +146,14 @@ nav a {
   text-transform: uppercase;
 }
 
+/* make anchor jumps land nicely below fixed header */
+#wardrobe,
+#workshop,
+#custom,
+#contact {
+  scroll-margin-top: 90px;
+}
+
 /* PHOTOS */
 
 .photos {
@@ -147,7 +171,10 @@ nav a {
 
 .photo-cols img {
   width: 100%;
+  height: auto;
+  display: block;
   border-radius: 6px;
+  object-fit: cover;
 }
 
 /* CTA */
@@ -181,9 +208,13 @@ nav a {
     text-align: center;
   }
 
+  .hero-mascot {
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
   .service-cols,
   .photo-cols {
     grid-template-columns: 1fr;
   }
 }
-

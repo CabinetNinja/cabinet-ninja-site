@@ -65,20 +65,19 @@ nav a {
 
 .hero {
   min-height: 90vh;
-  background: url("img/blueprint-bg.png") center/cover no-repeat;
+  /* dark gradient + blueprint */
+  background:
+    linear-gradient(
+      120deg,
+      rgba(0, 10, 15, 0.95) 0%,
+      rgba(0, 10, 15, 0.85) 35%,
+      rgba(0, 10, 15, 0.55) 70%,
+      rgba(0, 10, 15, 0.20) 100%
+    ),
+    url("img/blueprint-bg.png") center/cover no-repeat;
   padding: 120px 60px 80px;
   display: flex;
   align-items: center;
-  position: relative; /* needed for overlay */
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 20, 30, 0.55); /* DARK OVERLAY FOR READABILITY */
-  backdrop-filter: blur(1px);
-  z-index: 1;
 }
 
 .hero-inner {
@@ -88,8 +87,6 @@ nav a {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
-  position: relative; /* content above overlay */
-  z-index: 2;
 }
 
 .hero-mascot {
@@ -102,6 +99,15 @@ nav a {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+/* dark panel behind text so it's ALWAYS readable */
+.hero-copy {
+  position: relative;
+  padding: 20px 24px;
+  background: rgba(0, 10, 15, 0.85);
+  border-radius: 16px;
+  max-width: 480px;
 }
 
 .hero-copy h1 {
@@ -161,7 +167,7 @@ nav a {
   color: #ffffff;
 }
 
-/* Ensure anchor scroll stops below header */
+/* make anchor jumps land nicely below fixed header */
 #wardrobe,
 #workshop,
 #custom,
@@ -231,6 +237,10 @@ nav a {
   .hero-mascot {
     justify-content: center;
     margin-bottom: 16px;
+  }
+
+  .hero-copy {
+    margin: 0 auto;
   }
 
   .service-cols,

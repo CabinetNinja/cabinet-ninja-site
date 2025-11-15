@@ -45,8 +45,13 @@ header {
 }
 
 .logo img {
-  height: 48px;
+  height: 100px;
 }
+.logo span {
+  font-size: 32px;
+  letter-spacing: 0.1em;
+}
+
 
 nav ul {
   list-style: none;

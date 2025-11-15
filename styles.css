@@ -69,7 +69,10 @@ nav a {
 /* HERO */
 
 .hero {
-  min-height: 90vh;
+  min-height: 65vh;
+  padding: 80px 60px 40px;
+}
+
   /* dark gradient + blueprint */
   background:
     linear-gradient(

@@ -235,6 +235,17 @@ nav a {
   margin: 0 auto;
 }
 
+.photo-cols figure {
+  margin: 0;
+}
+
+.photo-cols figcaption {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #c4d2d6;
+}
+
+
 .photo-cols img {
   width: 100%;
   height: auto;
@@ -246,6 +257,7 @@ nav a {
 /* TESTIMONIALS */
 
 .testimonials {
+  border-top: 1px solid rgba(255,255,255,0.04);
   background: #02070b;
   padding: 40px 60px 45px;
 }
@@ -287,6 +299,7 @@ nav a {
 /* HOW IT WORKS */
 
 .how {
+  border-top: 1px solid rgba(255,255,255,0.04);
   background: #020a10;
   padding: 40px 60px 45px;
 }
@@ -327,6 +340,7 @@ nav a {
 /* LOCAL SECTION */
 
 .local {
+  border-top: 1px solid rgba(255,255,255,0.04);
   background: #02080d;
   padding: 35px 60px 45px;
 }

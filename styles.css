@@ -362,21 +362,31 @@ nav a {
 
 /* CTA */
 
+/* CTA */
+
 .cta-bottom {
   background: var(--dark);
   text-align: center;
-  padding: 50px 20px 70px;
+  padding: 50px 20px 90px;  /* a bit more room at the bottom */
 }
 
 .cta-bottom h2 {
   font-size: 28px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: #ffffff;
 }
 
-.cta-bottom a {
-  margin-top: 20px;
+.cta-bottom .cta-sub {
+  font-size: 14px;
+  color: #c4d2d6;
+  margin-bottom: 16px;
 }
+
+.cta-bottom .btn-primary {
+  display: inline-block;
+  margin-top: 4px;          /* space between text and button */
+}
+
 
 /* MOBILE */
 

@@ -2,259 +2,995 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Cabinet Ninja – Custom Wardrobes, Garage Storage & Workshop Cabinetry</title>
-  <meta
-    name="description"
-    content="Custom wardrobes, garage storage and workshop cabinetry in Rotorua, Taupō and Tokoroa. Built locally with quality materials, CNC precision and honest pricing."
-  />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cabinet Ninja — Garage Storage, Wardrobes & Built-In Cabinetry</title>
+  <style>
+    :root {
+      --bg: #071218;
+      --bg-2: #0b1d25;
+      --panel: rgba(8, 22, 30, 0.88);
+      --panel-solid: #0f222b;
+      --panel-soft: #112a35;
+      --line: rgba(255,255,255,0.08);
+      --line-strong: rgba(199,255,60,0.22);
+      --text: #ffffff;
+      --text-soft: #d7e4e8;
+      --text-muted: #9cb2bb;
+      --teal: #007a86;
+      --teal-2: #0aa1af;
+      --lime: #c7ff3c;
+      --shadow: 0 18px 50px rgba(0,0,0,0.35);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --max: 1200px;
+      --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    }
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3SF2MZD6NL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-3SF2MZD6NL');
-  </script>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font);
+      background:
+        radial-gradient(circle at top right, rgba(10,161,175,0.15), transparent 24%),
+        linear-gradient(180deg, #08131a 0%, #061015 100%);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(12px);
+      background: rgba(4, 12, 16, 0.82);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .site-header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 84px;
+      gap: 24px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .logo-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--teal), #0f3f48);
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+      font-size: 18px;
+      font-weight: 900;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+
+    .logo-text span:first-child {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      letter-spacing: 0.12em;
+      margin-bottom: 4px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--text-soft);
+      font-weight: 700;
+      font-size: 0.92rem;
+    }
+
+    nav a:hover { color: var(--lime); }
+
+    .header-cta {
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: var(--lime);
+      color: #081015;
+      font-weight: 900;
+      box-shadow: var(--shadow);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 72px 0 56px;
+      background:
+        linear-gradient(115deg, rgba(3,10,14,0.95) 0%, rgba(3,10,14,0.82) 42%, rgba(3,10,14,0.56) 100%),
+        url("img/blueprint-bg.png") center/cover no-repeat;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -120px -120px auto;
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle, rgba(199,255,60,0.16), transparent 65%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 1;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(10, 161, 175, 0.12);
+      color: var(--lime);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.74rem;
+      font-weight: 900;
+      margin-bottom: 18px;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 5.4vw, 5rem);
+      line-height: 0.96;
+      text-transform: uppercase;
+      letter-spacing: -0.03em;
+      max-width: 10ch;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 .accent {
+      color: var(--lime);
+      display: block;
+    }
+
+    .hero p.lead {
+      font-size: 1.1rem;
+      color: var(--text-soft);
+      max-width: 58ch;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 54px;
+      padding: 0 24px;
+      border-radius: 999px;
+      font-weight: 900;
+      font-size: 0.95rem;
+      letter-spacing: 0.02em;
+      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--lime);
+      color: #071015;
+      box-shadow: var(--shadow);
+    }
+
+    .btn-primary:hover,
+    .header-cta:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,0.14);
+      color: var(--text);
+      background: rgba(255,255,255,0.03);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .hero-card-wrap {
+      display: grid;
+      gap: 18px;
+    }
+
+    .hero-showcase {
+      background: linear-gradient(180deg, rgba(15,34,43,0.98), rgba(8,19,25,0.95));
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-xl);
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-showcase img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 20px;
+      margin-bottom: 14px;
+    }
+
+    .hero-showcase .label {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--lime);
+      margin-bottom: 8px;
+    }
+
+    .hero-showcase h3 {
+      font-size: 1.35rem;
+      margin-bottom: 8px;
+    }
+
+    .hero-showcase p {
+      color: var(--text-soft);
+      font-size: 0.98rem;
+    }
+
+    .hero-mini-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .mini-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius-lg);
+      padding: 18px;
+    }
+
+    .mini-card strong {
+      display: block;
+      font-size: 1.2rem;
+      margin-bottom: 6px;
+      color: var(--lime);
+    }
+
+    .mini-card span {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+
+    .proof-strip {
+      background: #08151c;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .proof-strip .container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      padding: 22px 0;
+    }
+
+    .proof-item {
+      color: var(--text-soft);
+      font-weight: 700;
+      font-size: 0.95rem;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .proof-item::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--lime);
+      flex: 0 0 auto;
+      box-shadow: 0 0 0 6px rgba(199,255,60,0.08);
+    }
+
+    section {
+      padding: 80px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .section-header {
+      max-width: 720px;
+      margin-bottom: 34px;
+    }
+
+    .section-header .kicker {
+      color: var(--lime);
+      text-transform: uppercase;
+      font-size: 0.76rem;
+      letter-spacing: 0.16em;
+      font-weight: 900;
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+
+    .section-header h2 {
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      line-height: 1.02;
+      margin-bottom: 12px;
+    }
+
+    .section-header p {
+      color: var(--text-soft);
+      font-size: 1.02rem;
+    }
+
+    .offer-grid,
+    .project-grid,
+    .testimonial-grid,
+    .step-grid {
+      display: grid;
+      gap: 22px;
+    }
+
+    .offer-grid { grid-template-columns: repeat(3, 1fr); }
+    .project-grid { grid-template-columns: repeat(3, 1fr); }
+    .testimonial-grid { grid-template-columns: repeat(3, 1fr); }
+    .step-grid { grid-template-columns: repeat(4, 1fr); }
+
+    .card {
+      background: linear-gradient(180deg, rgba(16,38,47,0.96), rgba(10,23,30,0.96));
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+    }
+
+    .offer-card {
+      padding: 26px 22px;
+    }
+
+    .offer-card .icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, rgba(10,161,175,0.28), rgba(199,255,60,0.18));
+      border: 1px solid rgba(255,255,255,0.08);
+      margin-bottom: 18px;
+      font-size: 1.3rem;
+      font-weight: 900;
+    }
+
+    .offer-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+    }
+
+    .offer-card p {
+      color: var(--text-soft);
+      margin-bottom: 16px;
+    }
+
+    .offer-card ul {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .offer-card li {
+      padding-left: 18px;
+      position: relative;
+    }
+
+    .offer-card li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--lime);
+    }
+
+    .projects .project-card {
+      overflow: hidden;
+    }
+
+    .project-card img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    .project-copy {
+      padding: 18px;
+    }
+
+    .project-copy strong {
+      display: block;
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+    }
+
+    .project-copy p {
+      color: var(--text-soft);
+      font-size: 0.96rem;
+    }
+
+    .positioning {
+      background: linear-gradient(180deg, rgba(4,13,18,0.98), rgba(6,18,24,0.98));
+    }
+
+    .positioning-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .position-panel,
+    .checklist-panel {
+      padding: 28px;
+    }
+
+    .position-panel p {
+      color: var(--text-soft);
+      font-size: 1.02rem;
+      margin-bottom: 14px;
+    }
+
+    .checklist-panel h3 {
+      margin-bottom: 14px;
+      font-size: 1.2rem;
+    }
+
+    .checklist-panel ul {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+      color: var(--text-soft);
+    }
+
+    .checklist-panel li {
+      padding-left: 22px;
+      position: relative;
+    }
+
+    .checklist-panel li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--lime);
+      font-weight: 900;
+    }
+
+    .steps .card,
+    .testimonial {
+      padding: 22px;
+    }
+
+    .step-num {
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      background: rgba(199,255,60,0.12);
+      color: var(--lime);
+      font-weight: 900;
+      margin-bottom: 14px;
+      border: 1px solid rgba(199,255,60,0.18);
+    }
+
+    .steps h3 {
+      font-size: 1.08rem;
+      margin-bottom: 8px;
+    }
+
+    .steps p,
+    .testimonial p {
+      color: var(--text-soft);
+    }
+
+    .testimonial strong {
+      display: block;
+      margin-top: 12px;
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+
+    .final-cta {
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(135deg, rgba(10,161,175,0.12), rgba(199,255,60,0.08)),
+        linear-gradient(180deg, #08131a, #061015);
+    }
+
+    .cta-panel {
+      padding: 34px;
+      background: linear-gradient(180deg, rgba(12,30,38,0.96), rgba(8,20,26,0.96));
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .cta-panel h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.02;
+      margin-bottom: 12px;
+    }
+
+    .cta-panel p {
+      color: var(--text-soft);
+      margin-bottom: 20px;
+      max-width: 58ch;
+    }
+
+    .cta-list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      color: var(--text-soft);
+      margin-bottom: 20px;
+    }
+
+    .cta-list li::before {
+      content: "• ";
+      color: var(--lime);
+    }
+
+    .cta-box {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 22px;
+      padding: 22px;
+    }
+
+    .cta-box h3 {
+      font-size: 1.1rem;
+      margin-bottom: 14px;
+    }
+
+    .cta-box p,
+    .cta-box li {
+      font-size: 0.96rem;
+      color: var(--text-soft);
+    }
+
+    .cta-box ol {
+      padding-left: 18px;
+      display: grid;
+      gap: 10px;
+    }
+
+    footer {
+      padding: 28px 0 50px;
+      color: var(--text-muted);
+      background: #061015;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .positioning-grid,
+      .cta-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .offer-grid,
+      .project-grid,
+      .testimonial-grid,
+      .step-grid,
+      .proof-strip .container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 760px) {
+      .site-header .container {
+        min-height: auto;
+        padding: 14px 0;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .hero {
+        padding: 52px 0 40px;
+      }
+
+      .hero h1 {
+        max-width: none;
+      }
+
+      .hero-actions,
+      .hero-meta {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn-primary,
+      .btn-secondary,
+      .header-cta {
+        width: 100%;
+        text-align: center;
+      }
+
+      section {
+        padding: 58px 0;
+      }
+
+      .offer-grid,
+      .project-grid,
+      .testimonial-grid,
+      .step-grid,
+      .proof-strip .container,
+      .hero-mini-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-panel,
+      .position-panel,
+      .checklist-panel,
+      .hero-showcase,
+      .offer-card,
+      .steps .card,
+      .testimonial,
+      .cta-box {
+        padding: 22px;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="#top">
+        <div class="logo-mark">CN</div>
+        <div class="logo-text">
+          <span>Built Local</span>
+          <strong>Cabinet Ninja</strong>
+        </div>
+      </a>
 
-<header>
-  <div class="logo">
-    <img src="img/Cabinet Ninja Logo Text.png" alt="Cabinet Ninja Logo" />
-  </div>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#process">How It Works</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-  <nav>
-    <ul>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#photos">Our Work</a></li>
-      <li><a href="#how">How It Works</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+      <a class="header-cta" href="#contact">Send Photos</a>
+    </div>
+  </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-inner">
-    <div class="hero-mascot">
-      <img src="img/mascot.png" alt="Cabinet Ninja Mascot" />
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Chaos Ends Here — But Clearer</div>
+          <h1>Storage that looks sharp. <span class="accent">And works hard.</span></h1>
+          <p class="lead">
+            Custom garage cabinetry, wardrobes and built-in storage for Rotorua, Taupō and Tokoroa. Locally made, properly planned, and built without the cheap flat-pack feel.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn-primary" href="#contact">Send Photos for a Fast Estimate</a>
+            <a class="btn-secondary" href="#projects">See Real Projects</a>
+          </div>
+
+          <div class="hero-meta">
+            <span>Locally built in Atiamuri</span>
+            <span>Custom layouts</span>
+            <span>Honest pricing</span>
+            <span>No pushy sales</span>
+          </div>
+        </div>
+
+        <div class="hero-card-wrap">
+          <div class="hero-showcase">
+            <img src="img/workshop.jpg" alt="Cabinet Ninja garage or workshop cabinetry" />
+            <span class="label">Featured Project Type</span>
+            <h3>Garage and workshop storage that actually fixes the mess</h3>
+            <p>
+              Cabinets, drawers, benchtops and layouts designed around what you need to store — not generic boxes that almost fit.
+            </p>
+          </div>
+
+          <div class="hero-mini-grid">
+            <div class="mini-card">
+              <strong>Built Local</strong>
+              <span>Made in the Central North Island, not imported and guessed into place.</span>
+            </div>
+            <div class="mini-card">
+              <strong>Fast First Step</strong>
+              <span>Send a few photos and rough dims. We’ll tell you the next move.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="proof-strip">
+      <div class="container">
+        <div class="proof-item">Custom wardrobes and internals</div>
+        <div class="proof-item">Garage cabinets and benchtops</div>
+        <div class="proof-item">Built-ins for awkward spaces</div>
+        <div class="proof-item">Servicing Rotorua, Taupō and Tokoroa</div>
+      </div>
     </div>
 
-    <div class="hero-copy">
-      <p class="eyebrow">Locally made in Atiamuri</p>
-      <h1>Custom wardrobes, garage storage and workshop cabinetry in Rotorua, Taupō and Tokoroa</h1>
-      <p>
-        Built for real homes, sheds and workspaces — with clean design, solid hardware,
-        and no cheap flat-pack compromise.
-      </p>
+    <section class="positioning">
+      <div class="container positioning-grid">
+        <div class="card position-panel">
+          <div class="section-header">
+            <span class="kicker">Why Cabinet Ninja</span>
+            <h2>Not flat-pack. Not overdesigned. Just properly built storage.</h2>
+          </div>
+          <p>
+            Cabinet Ninja is for people who want their space sorted properly — with cabinetry that fits, looks clean, and feels worth paying for.
+          </p>
+          <p>
+            We build for real homes, real garages and real workspaces. That means better use of space, smarter layouts, and a better result than generic off-the-shelf systems.
+          </p>
+        </div>
 
-      <div class="hero-actions">
-        <a href="#contact" class="btn-primary">Send Photos for a Fast Estimate</a>
-        <a href="#photos" class="btn-secondary">See Our Work</a>
+        <div class="card checklist-panel">
+          <h3>What makes the difference</h3>
+          <ul>
+            <li>Locally made, not mass-produced offshore</li>
+            <li>CNC-cut accuracy and cleaner finishes</li>
+            <li>Layouts built around how you actually use the space</li>
+            <li>Quality panels and hardware that feel built properly</li>
+            <li>Straight-up process with no pushy sales rubbish</li>
+          </ul>
+        </div>
       </div>
+    </section>
 
-      <p class="hero-trust">
-        Custom-built. Honest pricing. No pushy sales.
-      </p>
+    <section id="services" class="services">
+      <div class="container">
+        <div class="section-header">
+          <span class="kicker">What We Build</span>
+          <h2>Three core storage solutions. Built sharp.</h2>
+          <p>
+            Keep the offer tight. Make the decision easy. These are the jobs most likely to turn into strong, profitable work.
+          </p>
+        </div>
+
+        <div class="offer-grid">
+          <article class="card offer-card">
+            <div class="icon">W</div>
+            <h3>Wardrobes</h3>
+            <p>Custom wardrobe layouts that make better use of the room and stop dead space being wasted.</p>
+            <ul>
+              <li>Sliding door internals</li>
+              <li>Drawers, shelves and hanging zones</li>
+              <li>Built to suit your room and routine</li>
+            </ul>
+          </article>
+
+          <article class="card offer-card">
+            <div class="icon">G</div>
+            <h3>Garage Storage</h3>
+            <p>Cabinets, shelving, drawers and benches that turn clutter into a usable system.</p>
+            <ul>
+              <li>Tools, gear and household overflow</li>
+              <li>Cabinets plus workspace</li>
+              <li>Cleaner, tougher, more usable garages</li>
+            </ul>
+          </article>
+
+          <article class="card offer-card">
+            <div class="icon">C</div>
+            <h3>Built-Ins</h3>
+            <p>Entertainment units and other custom cabinetry for spaces that need something more tailored.</p>
+            <ul>
+              <li>TV units and storage walls</li>
+              <li>Awkward spaces made useful</li>
+              <li>Designed to fit properly</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="kicker">Real Work</span>
+          <h2>Projects that feel practical, premium, and built to last.</h2>
+          <p>
+            This section should be fed with your best actual project photos over time. Good photos will carry a big chunk of the sale.
+          </p>
+        </div>
+
+        <div class="project-grid">
+          <article class="card project-card">
+            <img src="img/wardrobe.jpg" alt="Custom wardrobe with drawers and hanging space" />
+            <div class="project-copy">
+              <strong>Wardrobe storage with proper function</strong>
+              <p>Built around hanging space, drawers and everyday use instead of generic internals.</p>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <img src="img/workshop.jpg" alt="Garage or workshop storage with cabinets, drawers and bench" />
+            <div class="project-copy">
+              <strong>Garage and workshop cabinetry</strong>
+              <p>Cabinets, bench space and drawer storage that turn chaos into a workable setup.</p>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <img src="img/custom.jpg" alt="Built-in entertainment unit with custom storage" />
+            <div class="project-copy">
+              <strong>Built-ins for hard-to-fit spaces</strong>
+              <p>Clean-looking storage that suits the room properly and doesn’t feel tacked on.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <span class="kicker">What Customers Say</span>
+          <h2>Not trying to be the cheapest. Trying to be worth it.</h2>
+          <p>
+            Your current testimonials can sit here now. Later, replace them with stronger outcome-driven proof.
+          </p>
+        </div>
+
+        <div class="testimonial-grid">
+          <article class="card testimonial">
+            <p>“The new wardrobe looks awesome, it feels like luxury.”</p>
+            <strong>— Connie, Rotorua</strong>
+          </article>
+
+          <article class="card testimonial">
+            <p>“The new kitchen for our rental looks so much better than we expected.”</p>
+            <strong>— Modern Properties, Tokoroa</strong>
+          </article>
+
+          <article class="card testimonial">
+            <p>“Fast turnaround, great communication, and the install was flawless.”</p>
+            <strong>— Megan, Rotorua</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="steps">
+      <div class="container">
+        <div class="section-header">
+          <span class="kicker">How It Works</span>
+          <h2>Simple process. Less stuffing around.</h2>
+          <p>
+            The site should reduce friction. Make it obvious what the first step is and what happens after that.
+          </p>
+        </div>
+
+        <div class="step-grid">
+          <article class="card">
+            <div class="step-num">1</div>
+            <h3>Send photos</h3>
+            <p>Send a few photos, rough dimensions if you have them, and a quick note about what you want sorted.</p>
+          </article>
+
+          <article class="card">
+            <div class="step-num">2</div>
+            <h3>We review the job</h3>
+            <p>We look at the space, scope and likely fit, then come back with the next step or estimate path.</p>
+          </article>
+
+          <article class="card">
+            <div class="step-num">3</div>
+            <h3>We plan it properly</h3>
+            <p>Layout, sizing, materials and practical details get sorted before anything gets built.</p>
+          </article>
+
+          <article class="card">
+            <div class="step-num">4</div>
+            <h3>Build and install</h3>
+            <p>Your cabinetry is made locally and either installed properly or supplied as a clean kitset.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="final-cta">
+      <div class="container">
+        <div class="cta-panel">
+          <div>
+            <h2>Ready to get your space sorted?</h2>
+            <p>
+              Don’t send people into a vague “contact us” dead end. Give them a clear, easy next step that feels low friction and useful.
+            </p>
+            <ul class="cta-list">
+              <li>A few photos of the space</li>
+              <li>Rough width or height if you have it</li>
+              <li>What you want to store</li>
+              <li>Your suburb</li>
+            </ul>
+            <a class="btn-primary" href="mailto:info@cabinetninja.co.nz?subject=Cabinet%20Ninja%20Estimate%20Request">Send Photos for a Fast Estimate</a>
+          </div>
+
+          <aside class="cta-box">
+            <h3>What happens next</h3>
+            <ol>
+              <li>We check the photos and scope.</li>
+              <li>We tell you the likely next step.</li>
+              <li>If it looks like a fit, we move to measure-up or quote.</li>
+            </ol>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <span>Cabinet Ninja — Built locally in Atiamuri</span>
+      <span>Servicing Rotorua, Taupō, Tokoroa and surrounding areas</span>
     </div>
-  </div>
-</section>
-
-<!-- POSITIONING -->
-<section class="why">
-  <div class="why-inner">
-    <h2>Storage should make life easier — not add more chaos</h2>
-    <p>
-      Whether it’s a messy garage, a wardrobe that wastes space, or a built-in that needs
-      to fit properly, we design and build cabinetry that actually works for the way you
-      live and work.
-    </p>
-    <p>
-      No generic box solutions. No imported junk. Just sharp, well-built storage made to
-      suit your space.
-    </p>
-  </div>
-</section>
-
-<!-- WHY CHOOSE US -->
-<section class="why-points">
-  <div class="why-inner">
-    <h2>Why homeowners choose Cabinet Ninja</h2>
-    <ul>
-      <li>Made locally — not mass-produced overseas flat-pack</li>
-      <li>Built to fit real homes, garages and workshops</li>
-      <li>CNC-cut accuracy for clean lines and tidy finishes</li>
-      <li>Quality panels and hardware that feel built properly</li>
-      <li>Straight-up pricing with no pushy sales rubbish</li>
-    </ul>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section class="services" id="services">
-  <div class="services-heading">
-    <h2>What we build</h2>
-    <p>Practical, sharp-looking storage built to suit your space.</p>
-  </div>
-
-  <div class="service-cols">
-    <div class="service" id="wardrobe">
-      <img src="img/icon-wardrobe.png" alt="Wardrobe Icon" />
-      <div class="service-title">Wardrobes</div>
-      <p>
-        Custom wardrobes designed around your room, your storage needs,
-        and how you actually use the space.
-      </p>
-    </div>
-
-    <div class="service" id="workshop">
-      <img src="img/icon-workshop.png" alt="Workshop Icon" />
-      <div class="service-title">Garage & Workshop Storage</div>
-      <p>
-        Cabinets, drawers, shelving and bench setups that turn cluttered
-        spaces into clean, usable storage.
-      </p>
-    </div>
-
-    <div class="service" id="custom">
-      <img src="img/icon-custom.png" alt="Custom Icon" />
-      <div class="service-title">Built-Ins & Custom Cabinetry</div>
-      <p>
-        Entertainment units, storage walls and other built-in solutions
-        made to fit properly and look sharp.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- PHOTOS -->
-<section class="photos" id="photos">
-  <div class="photos-heading">
-    <h2>Real projects. Built locally.</h2>
-    <p>Here’s the kind of work we do for homes, garages and workspaces.</p>
-  </div>
-
-  <div class="photo-cols">
-    <figure>
-      <img src="img/wardrobe.jpg" alt="Custom wardrobe with drawers and hanging space" loading="lazy" />
-      <figcaption>Custom wardrobe with drawers and hanging space.</figcaption>
-    </figure>
-
-    <figure>
-      <img src="img/workshop.jpg" alt="Garage or workshop storage with cabinets, drawers and benchtop" loading="lazy" />
-      <figcaption>Garage or workshop storage with cabinets, drawers and benchtop.</figcaption>
-    </figure>
-
-    <figure>
-      <img src="img/custom.jpg" alt="Built-in entertainment unit with custom storage" loading="lazy" />
-      <figcaption>Built-in entertainment unit with custom storage.</figcaption>
-    </figure>
-  </div>
-</section>
-
-<!-- SOCIAL PROOF -->
-<section class="testimonials">
-  <div class="testimonials-inner">
-    <h2>What customers say</h2>
-    <p class="testimonials-intro">
-      We’re not trying to be the cheapest. We’re trying to build storage that
-      looks sharp, works properly, and feels worth paying for.
-    </p>
-
-    <div class="testimonial-list">
-      <div class="testimonial">
-        <p>“The new wardrobe looks awesome, it feels like luxury.”</p>
-        <span>— Connie, Rotorua</span>
-      </div>
-
-      <div class="testimonial">
-        <p>“The new kitchen for our rental looks so much better than we expected.”</p>
-        <span>— Modern Properties, Tokoroa</span>
-      </div>
-
-      <div class="testimonial">
-        <p>“Fast turnaround, great communication, and the install was flawless.”</p>
-        <span>— Megan, Rotorua</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section class="how" id="how">
-  <div class="how-inner">
-    <h2>How it works</h2>
-
-    <div class="steps">
-      <div class="step">
-        <h3>1. Send photos or book a measure-up</h3>
-        <p>
-          Start by sending a few photos, rough dimensions if you have them,
-          and a quick description of what you want.
-        </p>
-      </div>
-
-      <div class="step">
-        <h3>2. We plan the best setup</h3>
-        <p>
-          We work through layout, function, materials and finish options
-          to suit your space and budget.
-        </p>
-      </div>
-
-      <div class="step">
-        <h3>3. We build it properly</h3>
-        <p>
-          Your cabinetry is cut on our CNC and built in our Atiamuri workshop
-          using quality materials and precise production.
-        </p>
-      </div>
-
-      <div class="step">
-        <h3>4. Install or kitset</h3>
-        <p>
-          We can install it for you, or supply a clearly labelled kitset
-          if that suits the job better.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- LOCAL SECTION -->
-<section class="local">
-  <div class="local-inner">
-    <h2>Built locally in Atiamuri</h2>
-    <p>
-      All Cabinet Ninja projects are designed and made here in the Central North Island.
-      That means better quality control, cleaner communication, and cabinetry built for
-      New Zealand homes, garages and workshops — not generic imported systems made to almost fit.
-    </p>
-    <p class="service-area">
-      Servicing Rotorua, Taupō, Tokoroa and surrounding areas.
-    </p>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-bottom" id="contact">
-  <h2>Ready to get your space sorted?</h2>
-  <p class="cta-sub">
-    Send us a few photos of the space, rough dimensions if you have them,
-    what you want to store, and your suburb. We’ll review it and come back
-    with the next step.
-  </p>
-  <p class="cta-note">
-    No pushy sales. No wasting time. Just a straight answer on what’s possible.
-  </p>
-  <a href="mailto:info@cabinetninja.co.nz?subject=Cabinet%20Ninja%20Estimate%20Request" class="btn-primary">
-    Send Photos for a Fast Estimate
-  </a>
-</section>
-
+  </footer>
 </body>
 </html>

@@ -1,17 +1,22 @@
 :root {
   --bg: #071218;
-  --bg-alt: #0c1b22;
-  --bg-alt-2: #11242d;
-  --panel: #142832;
-  --panel-2: #19313b;
+  --bg-alt: #0b1a22;
+  --bg-alt-2: #10232d;
+  --panel: #142833;
+  --panel-2: #18303b;
   --line: rgba(255, 255, 255, 0.08);
-  --text: #f4f8f9;
-  --text-soft: #d2dde1;
-  --text-muted: #96aab2;
-  --teal: #0a6f78;
-  --teal-dark: #085a62;
-  --lime: #b9ef35;
-  --lime-hover: #c6f75a;
+
+  --text: #f5f8fa;
+  --text-soft: #d4dee3;
+  --text-muted: #97aab3;
+
+  --teal: #007a86;
+  --teal-dark: #055c65;
+  --teal-soft: #0f3e46;
+
+  --orange: #f47a20;
+  --orange-hover: #ff8a33;
+
   --shadow: 0 16px 40px rgba(0, 0, 0, 0.32);
   --radius: 18px;
   --max: 1180px;
@@ -88,7 +93,7 @@ a {
 }
 
 .main-nav a:hover {
-  color: var(--lime);
+  color: var(--orange);
 }
 
 .header-cta,
@@ -106,15 +111,15 @@ a {
 
 .header-cta,
 .btn-primary {
-  background: var(--lime);
-  color: #081015;
+  background: var(--orange);
+  color: #ffffff;
   box-shadow: var(--shadow);
 }
 
 .header-cta:hover,
 .btn-primary:hover {
   transform: translateY(-1px);
-  background: var(--lime-hover);
+  background: var(--orange-hover);
 }
 
 .btn-secondary {
@@ -155,15 +160,24 @@ a {
 
 .eyebrow,
 .section-kicker {
-  color: var(--lime);
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 900;
 }
 
 .eyebrow {
+  display: inline-block;
   margin-bottom: 16px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(0, 122, 134, 0.18);
+  border: 1px solid rgba(0, 122, 134, 0.35);
+  color: #ffffff;
+}
+
+.section-kicker {
+  color: var(--orange);
 }
 
 .hero h1 {
@@ -175,7 +189,7 @@ a {
 
 .hero h1 span {
   display: block;
-  color: var(--lime);
+  color: var(--orange);
 }
 
 .hero-text {
@@ -211,7 +225,7 @@ a {
   content: "•";
   position: absolute;
   left: 0;
-  color: var(--lime);
+  color: var(--orange);
 }
 
 .hero-image-wrap {
@@ -392,7 +406,7 @@ a {
   content: "✓";
   position: absolute;
   left: 0;
-  color: var(--lime);
+  color: var(--orange);
   font-weight: 900;
 }
 
@@ -418,8 +432,8 @@ a {
   display: grid;
   place-items: center;
   border-radius: 999px;
-  background: rgba(185, 239, 53, 0.12);
-  color: var(--lime);
+  background: rgba(244, 122, 32, 0.14);
+  color: var(--orange);
   font-weight: 900;
   margin-bottom: 14px;
 }

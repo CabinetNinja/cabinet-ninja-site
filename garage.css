@@ -79,6 +79,23 @@ a {
   width: auto;
 }
 
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  color: var(--text-soft);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.main-nav a:hover {
+  color: var(--orange);
+}
+
 .header-cta,
 .btn {
   display: inline-flex;
@@ -112,7 +129,7 @@ a {
 }
 
 .btn-secondary:hover {
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 /* HERO */
@@ -135,6 +152,10 @@ a {
   grid-template-columns: 1fr 1fr;
   gap: 46px;
   align-items: center;
+}
+
+.hero-copy {
+  max-width: 620px;
 }
 
 .eyebrow {
@@ -199,13 +220,18 @@ a {
   color: var(--orange);
 }
 
+.hero-image-wrap {
+  display: flex;
+  justify-content: center;
+}
+
 .hero-image {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: 22px;
   box-shadow: var(--shadow);
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* BARS + SECTIONS */
@@ -275,6 +301,8 @@ section {
   font-size: 1.02rem;
 }
 
+/* SHARED GRID SECTIONS */
+
 .problem-grid,
 .projects-grid,
 .process-grid,
@@ -300,6 +328,8 @@ section {
   box-shadow: var(--shadow);
 }
 
+/* PROBLEM / BENEFIT CARDS */
+
 .problem-card,
 .process-step,
 .testimonial {
@@ -310,6 +340,7 @@ section {
 .process-step h3 {
   font-size: 1.08rem;
   margin-bottom: 10px;
+  line-height: 1.25;
 }
 
 .problem-card p,
@@ -318,12 +349,16 @@ section {
   color: var(--text-soft);
 }
 
+/* PROJECTS */
+
 .project-card {
   overflow: hidden;
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card img {
@@ -336,19 +371,10 @@ section {
   padding: 16px 18px 18px;
   color: var(--text-soft);
   font-weight: 600;
+  flex-grow: 1;
 }
 
-.process-step span {
-  width: 40px;
-  height: 40px;
-  display: grid;
-  place-items: center;
-  border-radius: 999px;
-  background: rgba(244, 122, 32, 0.14);
-  color: var(--orange);
-  font-weight: 900;
-  margin-bottom: 14px;
-}
+/* FEATURE BAND */
 
 .feature-band {
   background: var(--bg-alt-2);
@@ -365,6 +391,22 @@ section {
   color: var(--text-soft);
   font-weight: 700;
 }
+
+/* PROCESS */
+
+.process-step span {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: rgba(244, 122, 32, 0.14);
+  color: var(--orange);
+  font-weight: 900;
+  margin-bottom: 14px;
+}
+
+/* TESTIMONIALS */
 
 .testimonial cite {
   color: var(--text-muted);
@@ -438,7 +480,7 @@ section {
   font-size: 0.93rem;
 }
 
-/* MOBILE */
+/* RESPONSIVE */
 
 @media (max-width: 1024px) {
   .hero-grid,
@@ -455,6 +497,10 @@ section {
 
   .process-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-copy {
+    max-width: none;
   }
 }
 
@@ -473,6 +519,10 @@ section {
 
   .logo img {
     height: 60px;
+  }
+
+  .main-nav {
+    justify-content: center;
   }
 
   .header-cta,
@@ -505,5 +555,9 @@ section {
 
   .proof-grid div {
     text-align: left;
+  }
+
+  .feature-band .container {
+    justify-content: flex-start;
   }
 }

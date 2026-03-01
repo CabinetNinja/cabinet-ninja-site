@@ -6,10 +6,10 @@
     name="viewport"
     content="width=device-width, initial-scale=1.0"
   />
-  <title>Cabinet Ninja — Garage Storage, Wardrobes & Built-In Cabinetry</title>
+  <title>Cabinet Ninja — Custom Garage Storage, Wardrobes & Built-Ins</title>
   <meta
     name="description"
-    content="Custom garage cabinetry, wardrobes and built-in storage in Rotorua, Taupō and Tokoroa. Locally made in Atiamuri with quality materials, sharp design and honest pricing."
+    content="Custom garage storage, wardrobes and built-ins for Rotorua, Taupō and Tokoroa. Locally made in Atiamuri with sharp design, quality materials and honest pricing."
   />
   <link rel="stylesheet" href="styles.css" />
 
@@ -24,19 +24,19 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
-      <a class="logo" href="#top" aria-label="Cabinet Ninja home">
-        <img src="img/Cabinet Ninja Logo Text.png" alt="Cabinet Ninja logo" class="logo-image" />
+    <div class="container header-inner">
+      <a href="#top" class="logo" aria-label="Cabinet Ninja home">
+        <img src="img/Cabinet Ninja Logo Text.png" alt="Cabinet Ninja logo" />
       </a>
 
-      <nav>
+      <nav class="main-nav">
         <a href="#services">Services</a>
         <a href="#projects">Projects</a>
-        <a href="#process">How It Works</a>
+        <a href="#why">Why Us</a>
         <a href="#contact">Contact</a>
       </nav>
 
-      <a class="header-cta" href="#contact">Send Photos</a>
+      <a href="#contact" class="header-cta">Send Photos</a>
     </div>
   </header>
 
@@ -44,336 +44,235 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <div class="eyebrow">Locally Built in Atiamuri</div>
+          <p class="eyebrow">Locally built in Atiamuri</p>
 
           <h1>
-            Storage that looks sharp.
-            <span class="accent">And works hard.</span>
+            Chaos out.
+            <span>Storage in.</span>
           </h1>
 
-          <p class="lead">
+          <p class="hero-text">
             Custom garage cabinetry, wardrobes and built-in storage for Rotorua,
-            Taupō and Tokoroa. Properly planned, locally made, and built without
+            Taupō and Tokoroa. Built properly, designed to fit, and made without
             the cheap flat-pack feel.
           </p>
 
           <div class="hero-actions">
-            <a class="btn-primary" href="#contact">Send Photos for a Fast Estimate</a>
-            <a class="btn-secondary" href="#projects">See Real Projects</a>
+            <a href="#contact" class="btn btn-primary">Send Photos for a Fast Estimate</a>
+            <a href="#projects" class="btn btn-secondary">See Real Projects</a>
           </div>
 
-          <div class="hero-meta">
-            <span>Custom layouts</span>
-            <span>Honest pricing</span>
-            <span>Quality hardware</span>
-            <span>No pushy sales</span>
-          </div>
+          <ul class="hero-points">
+            <li>Custom layouts</li>
+            <li>Quality hardware</li>
+            <li>Honest pricing</li>
+            <li>No pushy sales</li>
+          </ul>
         </div>
 
-        <div class="hero-card-wrap">
-          <div class="hero-showcase">
-            <img
-              src="img/workshop.jpg"
-              alt="Garage or workshop cabinetry by Cabinet Ninja"
-            />
-            <span class="label">Featured Project Type</span>
-            <h3>Garage and workshop storage that actually fixes the mess</h3>
-            <p>
-              Cabinets, drawers, benchtops and layouts designed around what you
-              need to store — not generic boxes that almost fit.
-            </p>
-          </div>
-
-          <div class="hero-mini-grid">
-            <div class="mini-card">
-              <strong>Built Local</strong>
-              <span>Made in the Central North Island, not imported and guessed into place.</span>
-            </div>
-            <div class="mini-card">
-              <strong>Fast First Step</strong>
-              <span>Send a few photos and rough dims. We’ll tell you the next move.</span>
-            </div>
-          </div>
+        <div class="hero-image-wrap">
+          <img src="img/workshop.jpg" alt="Cabinet Ninja garage or workshop cabinetry" class="hero-image" />
         </div>
       </div>
     </section>
 
-    <div class="proof-strip">
-      <div class="container">
-        <div class="proof-item">Custom wardrobes and internals</div>
-        <div class="proof-item">Garage cabinets and benchtops</div>
-        <div class="proof-item">Built-ins for awkward spaces</div>
-        <div class="proof-item">Servicing Rotorua, Taupō and Tokoroa</div>
+    <section class="proof-bar">
+      <div class="container proof-grid">
+        <div>Wardrobes</div>
+        <div>Garage Storage</div>
+        <div>Built-Ins</div>
+        <div>Rotorua • Taupō • Tokoroa</div>
       </div>
-    </div>
+    </section>
 
-    <section class="positioning">
-      <div class="container positioning-grid">
-        <div class="card position-panel">
-          <div class="section-header">
-            <span class="kicker">Why Cabinet Ninja</span>
-            <h2>Not flat-pack. Not overdesigned. Just properly built storage.</h2>
-          </div>
-
-          <p>
-            Cabinet Ninja is for people who want their space sorted properly —
-            with cabinetry that fits, looks clean, and feels worth paying for.
-          </p>
-
-          <p>
-            We build for real homes, real garages and real workspaces. That means
-            better use of space, smarter layouts, and a better result than
-            generic off-the-shelf systems.
+    <section class="services section-dark" id="services">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">What We Build</p>
+          <h2>Storage built to suit the way you actually use the space.</h2>
+          <p class="section-text">
+            Clear offer. Sharp presentation. No waffle.
           </p>
         </div>
 
-        <div class="card checklist-panel">
-          <h3>What makes the difference</h3>
+        <div class="services-grid">
+          <article class="service-card">
+            <img src="img/wardrobe.jpg" alt="Custom wardrobe cabinetry" />
+            <div class="service-copy">
+              <h3>Wardrobes</h3>
+              <p>
+                Custom internals, drawers, shelving and hanging space built around
+                your room and how you use it.
+              </p>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img src="img/workshop.jpg" alt="Garage and workshop cabinetry" />
+            <div class="service-copy">
+              <h3>Garage Storage</h3>
+              <p>
+                Cabinets, drawers, shelves and bench space that turn a cluttered
+                garage into something clean and usable.
+              </p>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img src="img/custom.jpg" alt="Built-in custom cabinetry" />
+            <div class="service-copy">
+              <h3>Built-Ins</h3>
+              <p>
+                Entertainment units and custom storage for spaces that need
+                something more tailored than off-the-shelf boxes.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects section-dark-alt" id="projects">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">Real Work</p>
+          <h2>Practical. Sharp-looking. Built properly.</h2>
+          <p class="section-text">
+            Your actual project photos should carry a big chunk of the sale here.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <figure class="project-card">
+            <img src="img/wardrobe.jpg" alt="Wardrobe with drawers and hanging storage" />
+            <figcaption>Wardrobe storage with proper function.</figcaption>
+          </figure>
+
+          <figure class="project-card">
+            <img src="img/workshop.jpg" alt="Garage cabinetry with bench and drawers" />
+            <figcaption>Garage and workshop storage that fixes the mess.</figcaption>
+          </figure>
+
+          <figure class="project-card">
+            <img src="img/custom.jpg" alt="Built-in entertainment unit and storage" />
+            <figcaption>Built-ins that fit the room properly.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="why section-dark" id="why">
+      <div class="container why-grid">
+        <div class="why-copy">
+          <p class="section-kicker">Why Cabinet Ninja</p>
+          <h2>Not flat-pack. Not generic. Just properly built storage.</h2>
+          <p class="section-text">
+            Cabinet Ninja is for people who want their space sorted properly —
+            with cabinetry that looks clean, fits right, and feels worth paying for.
+          </p>
+        </div>
+
+        <div class="why-list">
           <ul>
             <li>Locally made, not mass-produced offshore</li>
             <li>CNC-cut accuracy and cleaner finishes</li>
-            <li>Layouts built around how you actually use the space</li>
-            <li>Quality panels and hardware that feel built properly</li>
-            <li>Straight-up process with no pushy sales rubbish</li>
+            <li>Layouts built around real spaces</li>
+            <li>Quality panels and hardware</li>
+            <li>Straight-up process with no sales rubbish</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section id="services" class="services">
+    <section class="process section-dark-alt">
       <div class="container">
-        <div class="section-header">
-          <span class="kicker">What We Build</span>
-          <h2>Three core storage solutions. Built sharp.</h2>
-          <p>
-            Clear offer. Easy decision. These are the categories most likely to
-            turn into strong, profitable work.
-          </p>
-        </div>
-
-        <div class="offer-grid">
-          <article class="card offer-card">
-            <div class="icon">W</div>
-            <h3>Wardrobes</h3>
-            <p>
-              Custom wardrobe layouts that make better use of the room and stop
-              dead space being wasted.
-            </p>
-            <ul>
-              <li>Sliding door internals</li>
-              <li>Drawers, shelves and hanging zones</li>
-              <li>Built to suit your room and routine</li>
-            </ul>
-          </article>
-
-          <article class="card offer-card">
-            <div class="icon">G</div>
-            <h3>Garage Storage</h3>
-            <p>
-              Cabinets, shelving, drawers and benches that turn clutter into a
-              usable system.
-            </p>
-            <ul>
-              <li>Tools, gear and household overflow</li>
-              <li>Cabinets plus workspace</li>
-              <li>Cleaner, tougher, more usable garages</li>
-            </ul>
-          </article>
-
-          <article class="card offer-card">
-            <div class="icon">C</div>
-            <h3>Built-Ins</h3>
-            <p>
-              Entertainment units and other custom cabinetry for spaces that need
-              something more tailored.
-            </p>
-            <ul>
-              <li>TV units and storage walls</li>
-              <li>Awkward spaces made useful</li>
-              <li>Designed to fit properly</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="projects">
-      <div class="container">
-        <div class="section-header">
-          <span class="kicker">Real Work</span>
-          <h2>Projects that feel practical, premium, and built to last.</h2>
-          <p>
-            This section should carry some of the sale. Use your best actual
-            project photos here over time.
-          </p>
-        </div>
-
-        <div class="project-grid">
-          <article class="card project-card">
-            <img
-              src="img/wardrobe.jpg"
-              alt="Custom wardrobe with drawers and hanging space"
-            />
-            <div class="project-copy">
-              <strong>Wardrobe storage with proper function</strong>
-              <p>
-                Built around hanging space, drawers and everyday use instead of
-                generic internals.
-              </p>
-            </div>
-          </article>
-
-          <article class="card project-card">
-            <img
-              src="img/workshop.jpg"
-              alt="Garage or workshop storage with cabinets, drawers and bench"
-            />
-            <div class="project-copy">
-              <strong>Garage and workshop cabinetry</strong>
-              <p>
-                Cabinets, bench space and drawer storage that turn chaos into a
-                workable setup.
-              </p>
-            </div>
-          </article>
-
-          <article class="card project-card">
-            <img
-              src="img/custom.jpg"
-              alt="Built-in entertainment unit with custom storage"
-            />
-            <div class="project-copy">
-              <strong>Built-ins for hard-to-fit spaces</strong>
-              <p>
-                Clean-looking storage that suits the room properly and doesn’t
-                feel tacked on.
-              </p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="testimonials">
-      <div class="container">
-        <div class="section-header">
-          <span class="kicker">What Customers Say</span>
-          <h2>Not trying to be the cheapest. Trying to be worth it.</h2>
-          <p>
-            Use stronger outcome-based testimonials later, but this structure is
-            ready now.
-          </p>
-        </div>
-
-        <div class="testimonial-grid">
-          <article class="card testimonial">
-            <p>“The new wardrobe looks awesome, it feels like luxury.”</p>
-            <strong>— Connie, Rotorua</strong>
-          </article>
-
-          <article class="card testimonial">
-            <p>“The new kitchen for our rental looks so much better than we expected.”</p>
-            <strong>— Modern Properties, Tokoroa</strong>
-          </article>
-
-          <article class="card testimonial">
-            <p>“Fast turnaround, great communication, and the install was flawless.”</p>
-            <strong>— Megan, Rotorua</strong>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="process" class="steps">
-      <div class="container">
-        <div class="section-header">
-          <span class="kicker">How It Works</span>
+        <div class="section-head">
+          <p class="section-kicker">How It Works</p>
           <h2>Simple process. Less stuffing around.</h2>
-          <p>
-            Make the first step obvious and low-friction. That’s the point of the page.
-          </p>
         </div>
 
-        <div class="step-grid">
-          <article class="card">
-            <div class="step-num">1</div>
+        <div class="process-grid">
+          <div class="process-step">
+            <span>1</span>
             <h3>Send photos</h3>
-            <p>
-              Send a few photos, rough dimensions if you have them, and a quick
-              note about what you want sorted.
-            </p>
-          </article>
-
-          <article class="card">
-            <div class="step-num">2</div>
-            <h3>We review the job</h3>
-            <p>
-              We look at the space, scope and likely fit, then come back with the
-              next step or estimate path.
-            </p>
-          </article>
-
-          <article class="card">
-            <div class="step-num">3</div>
-            <h3>We plan it properly</h3>
-            <p>
-              Layout, sizing, materials and practical details get sorted before
-              anything gets built.
-            </p>
-          </article>
-
-          <article class="card">
-            <div class="step-num">4</div>
-            <h3>Build and install</h3>
-            <p>
-              Your cabinetry is made locally and either installed properly or
-              supplied as a clean kitset.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="final-cta">
-      <div class="container">
-        <div class="cta-panel">
-          <div>
-            <h2>Ready to get your space sorted?</h2>
-            <p>
-              Don’t dump people into a vague contact dead end. Give them a clear,
-              easy next step that feels useful.
-            </p>
-
-            <ul class="cta-list">
-              <li>A few photos of the space</li>
-              <li>Rough width or height if you have it</li>
-              <li>What you want to store</li>
-              <li>Your suburb</li>
-            </ul>
-
-            <a
-              class="btn-primary"
-              href="mailto:info@cabinetninja.co.nz?subject=Cabinet%20Ninja%20Estimate%20Request"
-            >
-              Send Photos for a Fast Estimate
-            </a>
+            <p>A few photos, rough dimensions if you have them, and a quick note about what you want sorted.</p>
           </div>
 
-          <aside class="cta-box">
-            <h3>What happens next</h3>
-            <ol>
-              <li>We check the photos and scope.</li>
-              <li>We tell you the likely next step.</li>
-              <li>If it looks like a fit, we move to measure-up or quote.</li>
-            </ol>
-          </aside>
+          <div class="process-step">
+            <span>2</span>
+            <h3>We review it</h3>
+            <p>We look at the space, the likely fit, and what the next step should be.</p>
+          </div>
+
+          <div class="process-step">
+            <span>3</span>
+            <h3>We plan it properly</h3>
+            <p>Layout, sizing, materials and practical details get locked in before build.</p>
+          </div>
+
+          <div class="process-step">
+            <span>4</span>
+            <h3>Build and install</h3>
+            <p>Your cabinetry is built locally and installed properly, or supplied as a clean kitset.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials section-dark">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">What Customers Say</p>
+          <h2>Not trying to be the cheapest. Trying to be worth it.</h2>
+        </div>
+
+        <div class="testimonials-grid">
+          <blockquote class="testimonial">
+            <p>“The new wardrobe looks awesome, it feels like luxury.”</p>
+            <cite>— Connie, Rotorua</cite>
+          </blockquote>
+
+          <blockquote class="testimonial">
+            <p>“The new kitchen for our rental looks so much better than we expected.”</p>
+            <cite>— Modern Properties, Tokoroa</cite>
+          </blockquote>
+
+          <blockquote class="testimonial">
+            <p>“Fast turnaround, great communication, and the install was flawless.”</p>
+            <cite>— Megan, Rotorua</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta section-cta" id="contact">
+      <div class="container cta-inner">
+        <div class="cta-copy">
+          <p class="section-kicker">Get Started</p>
+          <h2>Ready to get your space sorted?</h2>
+          <p class="section-text">
+            Send a few photos of the space, rough dimensions if you have them,
+            what you want to store, and your suburb.
+          </p>
+          <a href="mailto:info@cabinetninja.co.nz?subject=Cabinet%20Ninja%20Estimate%20Request" class="btn btn-primary">
+            Send Photos for a Fast Estimate
+          </a>
+        </div>
+
+        <div class="cta-box">
+          <h3>What happens next</h3>
+          <ol>
+            <li>We check the photos and scope</li>
+            <li>We tell you the likely next step</li>
+            <li>If it looks like a fit, we move to measure-up or quote</li>
+          </ol>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="container footer-row">
+  <footer class="site-footer">
+    <div class="container footer-inner">
       <span>Cabinet Ninja — Built locally in Atiamuri</span>
       <span>Servicing Rotorua, Taupō, Tokoroa and surrounding areas</span>
     </div>

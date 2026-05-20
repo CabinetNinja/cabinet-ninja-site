@@ -301,6 +301,15 @@ a {
   background: #07141a;
 }
 
+.hero-image-card picture,
+.before-after picture,
+.mini-before-after picture,
+.project-card > picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .before-after img {
   width: 100%;
   height: 100%;
@@ -348,22 +357,26 @@ a {
   height: auto;
 }
 
-.project-card > img {
+.project-card > img,
+.project-card > picture > img {
   width: 100%;
   height: 240px;
   max-height: 280px;
   object-fit: cover;
 }
 
-.project-card > .image-cairngorm-after {
+.project-card > .image-cairngorm-after,
+.project-card > picture > .image-cairngorm-after {
   object-position: center 48%;
 }
 
-.project-card > .image-wardrobe {
+.project-card > .image-wardrobe,
+.project-card > picture > .image-wardrobe {
   object-position: center 42%;
 }
 
-.project-card > .image-hallway-after {
+.project-card > .image-hallway-after,
+.project-card > picture > .image-hallway-after {
   object-position: center 46%;
 }
 
@@ -884,6 +897,7 @@ a {
   }
 
   .project-card > img,
+  .project-card > picture > img,
   .mini-before-after img {
     height: 220px;
   }

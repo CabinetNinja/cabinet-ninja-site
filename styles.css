@@ -337,6 +337,15 @@ a {
   object-position: center 48%;
 }
 
+.laundry-page .hero-image.image-laundry-project,
+.laundry-page .before-after .image-laundry-project {
+  object-position: center 62%;
+}
+
+.laundry-page .before-after .image-laundry-before {
+  object-position: center 52%;
+}
+
 .before-after figcaption,
 .mini-before-after figcaption {
   position: absolute;

@@ -856,6 +856,14 @@ a {
   margin-bottom: 18px;
 }
 
+.plain-panel .scope-note {
+  margin: 22px 0 0;
+  padding: 14px 16px;
+  border-left: 4px solid var(--orange);
+  background: rgba(255, 122, 22, 0.08);
+  color: var(--soft);
+}
+
 .check-list {
   display: grid;
   gap: 11px;
